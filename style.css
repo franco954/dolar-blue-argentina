@@ -1,0 +1,29 @@
+
+
+
+#presentation-page{
+    text-align: center;
+    
+}
+
+#presentation-page > img{
+
+
+    width: 250px;
+    height: 260px;
+    border-radius: 100%;
+
+
+
+
+}
+
+#presentation-page > img:hover {
+    transition:all .2s ease-in-out;
+    filter: saturate(250%);
+}
+
+#dolar-blue-precio{
+    text-align: center;
+    
+}
