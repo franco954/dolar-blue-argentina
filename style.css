@@ -1,5 +1,9 @@
 
 
+#keywords{
+    color: #fff;
+    user-select: none;
+}
 
 #presentation-page{
     text-align: center;
