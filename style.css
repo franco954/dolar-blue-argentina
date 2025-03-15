@@ -1,5 +1,9 @@
 
 
+#keywords{
+    color: #fff;
+    user-select: none;
+}
 
 #presentation-page{
     text-align: center;
@@ -27,3 +31,27 @@
     text-align: center;
     
 }
+
+#dolar-blue-market{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#dolar-blue-market > div{
+    margin: 2%;
+}
+
+#anim_net{
+    width: 100vw;
+    height: 100vh;
+    padding:0;
+    margin:0;
+    background-color:rgb(255, 255, 255); /*Cover use when the animation doesn't work. ex:mobile*/
+    overflow:hidden; 
+  }
+  body{
+    margin:0;
+  }
+  
+  
