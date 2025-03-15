@@ -10,10 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: echo "No build needed, just publish the static files"
+  displayName: 'Publish static files'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+# Publicar artefactos directamente
+- publish: $(Build.SourcesDirectory)   # Asume que tus archivos estáticos están directamente en el repositorio
+  artifact: usd-site-artifact
+  displayName: 'Publish artifact'
+
