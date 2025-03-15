@@ -1,10 +1,10 @@
 
 
 
-const insertDataIntoPage = (pVenta, pCompra) => {
+const insertDataIntoPage = (pCompra) => {
 
 
-    document.querySelector('#dolar-blue-precio').innerHTML = `<h2 class="text-info"> <strong> 1 USD = ${pCompra} pesos </strong></h>`
+    document.querySelector('#dolar-blue-precio').innerHTML = `<h2 class="text-info"> <strong> 1 USD = ${pCompra} pesos argentinos. </strong></h>`
 
 
 
@@ -16,10 +16,10 @@ const insertDataIntoPage = (pVenta, pCompra) => {
 
 
 
-fetch("https://criptoya.com/api/buenbit/dai/ars")
+fetch("https://criptoya.com/api/dolar")
   .then(response => response.json())
   .then(data => {
-    insertDataIntoPage(data.bid, data.ask)
+    insertDataIntoPage(data.oficial.price)
 }
     )
   .catch(error => console.error(error));
