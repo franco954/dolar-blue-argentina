@@ -16,8 +16,3 @@ jobs:
     displayName: 'List files in $(Build.SourcesDirectory)'
 
 
-  - script: |
-      echo "Received Parameter param1: $(param1)"
-      echo "Received Parameter param2: $(param2)"
-    displayName: 'Show Parameters test'
-
