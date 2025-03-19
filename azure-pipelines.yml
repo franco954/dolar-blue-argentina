@@ -1,24 +1,28 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - master
 
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- script: echo "No build needed, just publish the static files"
-  displayName: 'Publish static files'
+jobs:
+- job: listJob
+  displayName: 'ListJob'
+  pool:
+    vmImage: 'ubuntu-latest'
+  
+  steps:
+    # Ver el contenido del directorio antes de publicarlo
+    - script: ls -R $(Build.SourcesDirectory)
+      displayName: 'List files in $(Build.SourcesDirectory)'
 
-# Incluir el template desde el mismo directorio
-- template: azure-pipelines-1.yml  # Nombre de tu archivo template
+    # Incluir el template
+    - template: azure-pipelines-1.yml  # Nombre de tu archivo template
 
-# Publicar artefactos directamente
-- publish: $(Build.SourcesDirectory)   # Asume que tus archivos estáticos están directamente en el repositorio
-  artifact: usd-site-artifact
-  displayName: 'Publish artifact'
+
+    # Publicar artefactos directamente
+    - publish: $(Build.SourcesDirectory)
+      artifact: usd-site-artifact
+      displayName: 'Publish artifact'
+
 
 
