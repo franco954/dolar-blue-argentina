@@ -4,12 +4,6 @@
 # https://aka.ms/yaml
 
 
-jobs:
-- job: listJob
-  displayName: 'ListJob'
-  pool:
-    vmImage: 'ubuntu-latest'
-  
   steps:
     # Ver el contenido del directorio antes de publicarlo
   - script: ls -R $(Build.SourcesDirectory)
