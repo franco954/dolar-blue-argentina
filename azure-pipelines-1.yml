@@ -1,0 +1,25 @@
+# HTML
+# Archive your static HTML project and save it with the build record.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+
+pr: none
+
+jobs:
+- job: listJob
+  displayName: 'ListJob'
+  pool:
+    vmImage: 'ubuntu-latest'
+  
+  steps:
+  - script: |
+      echo "Running Secondary Pipeline"
+    displayName: 'Run Secondary Pipeline'
+
+  - script: |
+      echo "Received Parameter param1: $(param1)"
+      echo "Received Parameter param2: $(param2)"
+    displayName: 'Show Parameters test'
+
