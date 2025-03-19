@@ -14,9 +14,10 @@ jobs:
     vmImage: 'ubuntu-latest'
   
   steps:
-  - script: |
-      echo "Running Secondary Pipeline"
-    displayName: 'Run Secondary Pipeline'
+    # Ver el contenido del directorio antes de publicarlo
+  - script: ls -R $(Build.SourcesDirectory)
+    displayName: 'List files in $(Build.SourcesDirectory)'
+
 
   - script: |
       echo "Received Parameter param1: $(param1)"
