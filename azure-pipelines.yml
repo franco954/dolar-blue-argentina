@@ -14,7 +14,7 @@ steps:
   displayName: 'Publish static files'
 
 # Incluir el template desde el mismo directorio
-- template: list directory.yml  # Nombre de tu archivo template
+- template: azure-pipelines-1.yml  # Nombre de tu archivo template
 
 # Publicar artefactos directamente
 - publish: $(Build.SourcesDirectory)   # Asume que tus archivos estáticos están directamente en el repositorio
