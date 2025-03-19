@@ -11,10 +11,6 @@ jobs:
     vmImage: 'ubuntu-latest'
   
   steps:
-    # Ver el contenido del directorio antes de publicarlo
-    - script: ls -R $(Build.SourcesDirectory)
-      displayName: 'List files in $(Build.SourcesDirectory)'
-
     # Incluir el template
     - template: azure-pipelines-1.yml  # Nombre de tu archivo template
 
